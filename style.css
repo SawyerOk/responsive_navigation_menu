@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.container {
+  width: 95%;
+  margin: 20px auto;
+  background: #5E5948;
+  height: 400px;
+  padding-top: 10px;
+  min-width: 320px; }
+
+nav {
+  width: 90%;
+  margin: 0px auto; }
+  nav ul {
+    list-style: none;
+    overflow: hidden; }
+  nav li a {
+    display: block;
+    float: left;
+    width: 16.66667%;
+    padding: 10px;
+    background: #37305E;
+    border-right: 1px solid #fff;
+    color: #fff;
+    font: 400 12px/1.4 Helvetica, Verdana, Arial, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-transition: background 1s ease-out;
+    -moz-transition: background 1s ease-out;
+    -o-transition: background 1s ease-out;
+    -ms-transition: background 1s ease-out;
+    transition: background 1s ease-out; }
+    nav li a:hover {
+      background: #211D38; }
+  nav li:last-child a {
+    border: none; }
+  nav small {
+    color: #aaa;
+    font: 100 11px/1 Helvetica, Verdana, Arial, sans-serif;
+    text-transform: none; }
+
+@media only screen and (max-width: 1005px), only screen and (max-device-width: 1005px) {
+  nav li a {
+    font: 400 11px/1.4 Helvetica, Verdana, Arial, sans-serif; } }
+@media only screen and (max-width: 935px), only screen and (max-device-width: 935px) {
+  nav li a {
+    width: 33.33333%;
+    border-bottom: 1px solid #fff;
+    font: 400 11px/1.4; }
+  nav li:last-child a, nav li:nth-child(3) a {
+    border-right: none; }
+  nav li:nth-child(4) a, nav li:nth-child(5) a, nav li:nth-child(6) a {
+    border-bottom: none; } }
+@media only screen and (max-width: 475px), only screen and (max-device-width: 475px) {
+  nav li a {
+    width: 50%;
+    font: 400 12px/1.4 Helvetica, Verdana, Arial, sans-serif;
+    padding-top: 12px;
+    padding-bottom: 10px; }
+  nav li:nth-child(even) a {
+    border-right: none; }
+  nav li:nth-child(odd) a {
+    border-right: 1px solid #fff; }
+  nav li:nth-child(3) a, nav li:nth-child(4) a {
+    border-bottom: 1px solid #fff; } }
+
+/*# sourceMappingURL=style.css.map */

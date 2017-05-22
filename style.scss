@@ -1,0 +1,130 @@
+$f_styles :  Helvetica, Verdana, Arial, sans-serif;
+$font-size : 12px;
+$font-size-sm: 11px;
+$line-height : 1.4;
+$line-height-sm: 1;
+
+@mixin bg_trans($dur, $style){
+  -webkit-transition: background $dur $style;
+  -moz-transition:    background $dur $style;
+  -o-transition:      background $dur $style;
+  -ms-transition:     background $dur $style;
+  transition:         background $dur $style;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container{
+  width: 95%;
+  margin: 20px auto;
+  background: #5E5948;
+  height: 400px;
+  padding-top: 10px;
+  min-width: 320px;
+}
+
+nav {
+  width: 90%;
+  margin: 0px auto;
+
+
+  ul {
+    list-style: none;
+    overflow: hidden;
+  }
+
+  li {
+    a{
+      display: block;
+      float: left;
+      width: 100/6 * 1%;
+      padding: 10px;
+
+      background: #37305E;
+      border-right: 1px solid #fff;
+
+      color: #fff;
+      font: 400 #{$font-size}/#{$line-height} $f_styles;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      // Transition
+      @include bg_trans(1s, ease-out);
+
+
+      &:hover {
+        background: #211D38;
+      }
+    }
+    &:last-child a {
+      border: none;
+    }
+  }
+
+  small {
+    color: #aaa;
+    font: 100 #{$font-size-sm}/#{$line-height-sm} $f_styles;
+    text-transform: none;
+  }
+}
+
+// Media Queries
+
+@media only screen and (max-width : 1005px),
+only screen and (max-device-width : 1005px){
+  nav li {
+    a{
+      font: 400 11px/1.4 Helvetica, Verdana, Arial, sans-serif;
+      }
+    }
+}
+
+@media only screen and (max-width : 935px),
+only screen and (max-device-width : 935px){
+  nav li {
+    a{
+      width: 100/3 * 1%;
+      border-bottom: 1px solid #fff;
+      font: 400 #{$font-size - 1}/#{$line-height};
+    }
+    &:last-child a, &:nth-child(3) a {
+      border-right: none;
+    }
+
+    &:nth-child(4) a, &:nth-child(5) a, &:nth-child(6) a {
+      border-bottom: none;
+    }
+  }
+}
+
+@media only screen and (max-width : 475px),
+only screen and (max-device-width : 475px){
+  nav li {
+    a {
+      width: 50%;
+      font: 400 #{$font-size}/#{$line-height} $f_styles;
+      padding-top: 12px;
+      padding-bottom: 10px;
+    }
+
+    &:nth-child(even) a{
+      border-right: none;
+    }
+    &:nth-child(odd) a {
+      border-right: 1px solid #fff;
+    }
+    &:nth-child(3) a, &:nth-child(4) a {
+      border-bottom: 1px solid #fff;
+
+    }
+  }
+}
